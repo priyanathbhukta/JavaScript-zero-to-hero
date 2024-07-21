@@ -1,3 +1,4 @@
+
 //1.......
 console.log("*****************1********************");
 let score = "33abc"
@@ -69,3 +70,30 @@ console.log(typeof (v3)); // number
         false => 0
         undefine=> NaN
 */
+
+// ******************** Operations *********************
+
+
+let val = 3
+let negval = -val
+console.log(negval); // -3
+
+
+
+console.log(2+2); //4
+console.log(2-2); //0
+console.log(2*2); //4
+console.log(2/2); //1
+console.log(2**3); //8
+console.log(2%3); //2
+
+let s1 = "ram"
+let s2 = "sita"
+let s3 = s1+" "+s2
+console.log(s3); //ram sita
+
+
+console.log("1"+2); //12
+console.log(1+"2"); //12
+console.log("1"+2+2); //122
+console.log(1+2+"2"); //32
