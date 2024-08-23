@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Comapatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | four</title>
+</head>
+<body style="background-color:#212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Add Value to the html file
+    function addLanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")       // function travers the whole tree evrytime
+// Optimized Approach that doesn't traverse whole tree of DOM less time taking
+    function addAnotherLanguage(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addAnotherLanguage("R Programming")
+
+
+//Edit Value to the html file
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "MOJO"
+    secondLang.replaceWith(newli)       // replace Python with MOJO
+
+
+//Another edit value
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li>Swift</li>'      //Javascript changed by Swift
+
+// remove one element from list
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()       // remove "R Programming from the list"
+    
+</script>
+</html>
